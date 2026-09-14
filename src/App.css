@@ -1,0 +1,615 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1e293b;
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      rgba(239, 246, 255, 0.72),
+      rgba(248, 251, 255, 0.78)
+    ),
+    url("/background img.PNG");
+
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  width: 72%;
+  max-width: 1155px;
+  height: 56px;
+
+  margin: 10px auto 0;
+
+  background: rgba(255, 255, 255, 0.90);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 22px;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 5px 20px rgba(37, 99, 235, 0.08);
+
+  position: relative;
+  z-index: 100;
+}
+
+/* ================= LOGO ================= */
+
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+  color: #172554;
+}
+
+.logo span {
+  color: #2563eb;
+}
+
+/* ================= NAV BUTTONS ================= */
+
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-buttons button {
+  padding: 8px 22px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+/* Login */
+
+.login-btn {
+  background: white;
+
+  border: 1px solid #5878ff;
+
+  color: #315bea;
+}
+
+.login-btn:hover {
+  background: #eff6ff;
+}
+
+/* Sign Up */
+
+.signup-btn {
+  background: #4b6df5;
+
+  border: 1px solid #4b6df5;
+
+  color: white;
+}
+
+.signup-btn:hover {
+  background: #3157db;
+}
+
+/* ================= MAIN ================= */
+
+.container {
+  width: 58%;
+  max-width: 930px;
+
+  margin: 14px auto 40px;
+
+  text-align: center;
+}
+
+/* ================= HEADING ================= */
+
+h1 {
+  text-align: center;
+
+  font-size: 42px;
+
+  color: #172d68;
+
+  margin-top: 62px;
+
+  margin-bottom: 5px;
+
+  font-weight: 700;
+}
+
+/* ================= SUBTITLE ================= */
+
+.subtitle {
+  text-align: center;
+
+  color: #596b8d;
+
+  font-size: 20px;
+
+  margin-top: 0;
+
+  margin-bottom: 27px;
+}
+
+/* ================= FORM ================= */
+
+form {
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  padding: 22px;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 30px rgba(37, 99, 235, 0.10);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 10px;
+}
+
+/* ================= INPUT BOX ================= */
+
+.input-box {
+  flex: 1;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+
+  left: 13px;
+
+  font-size: 14px;
+
+  z-index: 1;
+
+  filter: grayscale(100%);
+
+  opacity: 0.8;
+}
+
+.input-box input {
+  width: 100%;
+
+  height: 38px;
+
+  padding: 10px 12px 10px 37px;
+
+  border: 1px solid #dce4f1;
+
+  border-radius: 7px;
+
+  outline: none;
+
+  font-size: 12px;
+
+  color: #334155;
+
+  background: white;
+
+  transition: 0.2s;
+}
+
+.input-box input::placeholder {
+  color: #64748b;
+}
+
+.input-box input:focus {
+  border-color: #4b6df5;
+
+  box-shadow:
+    0 0 0 3px rgba(75, 109, 245, 0.08);
+}
+
+/* ================= ADD STUDENT ================= */
+
+.submit-btn {
+  height: 38px;
+
+  padding: 0 32px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #4b6df5;
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  white-space: nowrap;
+}
+
+.submit-btn:hover {
+  background: #3157db;
+}
+
+/* ================= STUDENT LIST ================= */
+
+.student-list {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+/* ================= STUDENT CARD ================= */
+
+.student-card {
+  width: 100%;
+
+  min-height: 90px;
+
+  background: rgba(255, 255, 255, 0.91);
+
+  padding: 12px 16px;
+
+  border: 1px solid #e3eaf5;
+
+  border-radius: 11px;
+
+  box-shadow:
+    0 4px 15px rgba(37, 99, 235, 0.06);
+
+  display: flex;
+
+  align-items: center;
+
+  text-align: left;
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition: 0.25s;
+}
+
+/* Blue Top Line */
+
+.student-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  height: 2px;
+
+  background: #dce6ff;
+}
+
+.student-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(37, 99, 235, 0.10);
+}
+
+/* ================= STUDENT AVATAR ================= */
+
+.student-avatar {
+  width: 66px;
+
+  height: 66px;
+
+  min-width: 66px;
+
+  background: #e8f0ff;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 32px;
+
+  margin-right: 20px;
+}
+
+/* ================= STUDENT INFO ================= */
+
+.student-info {
+  flex: 1;
+
+  text-align: left;
+}
+
+.student-info p {
+  margin-bottom: 7px;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  line-height: 1.2;
+}
+
+.student-info p:last-child {
+  margin-bottom: 0;
+}
+
+.student-info p span {
+  display: inline-block;
+
+  width: 25px;
+
+  margin-right: 0;
+
+  color: #475569;
+}
+
+.student-info strong {
+  color: #263b70;
+
+  margin-right: 5px;
+}
+
+/* ================= BUTTONS ================= */
+
+.buttons {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-left: 20px;
+}
+
+.buttons button {
+  height: 36px;
+
+  min-width: 85px;
+
+  padding: 0 16px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+/* ================= EDIT ================= */
+
+.edit-btn {
+  background: #4b6df5;
+}
+
+.edit-btn:hover {
+  background: #3157db;
+}
+
+/* ================= DELETE ================= */
+
+.delete-btn {
+  background: #ff4d64;
+}
+
+.delete-btn:hover {
+  background: #e52f48;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 1100px) {
+
+  .navbar {
+    width: 90%;
+  }
+
+  .container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .navbar {
+    width: 94%;
+
+    height: 60px;
+
+    padding: 0 16px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav-buttons {
+    gap: 6px;
+  }
+
+  .nav-buttons button {
+    padding: 8px 13px;
+
+    font-size: 12px;
+  }
+
+  .container {
+    width: 94%;
+
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 31px;
+
+    margin-top: 45px;
+
+    margin-bottom: 7px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+
+    margin-bottom: 25px;
+  }
+
+  form {
+    flex-direction: column;
+
+    padding: 18px;
+
+    gap: 10px;
+  }
+
+  .input-box {
+    width: 100%;
+  }
+
+  .input-box input {
+    height: 42px;
+  }
+
+  .submit-btn {
+    width: 100%;
+
+    height: 42px;
+  }
+
+  .student-card {
+    padding: 16px;
+
+    flex-wrap: wrap;
+  }
+
+  .student-avatar {
+    width: 55px;
+
+    height: 55px;
+
+    min-width: 55px;
+
+    font-size: 27px;
+
+    margin-right: 14px;
+  }
+
+  .student-info {
+    flex: 1;
+
+    min-width: 180px;
+  }
+
+  .buttons {
+    width: 100%;
+
+    margin-left: 0;
+
+    margin-top: 12px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 450px) {
+
+  .navbar {
+    width: 96%;
+
+    height: 58px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .nav-buttons button {
+    padding: 7px 10px;
+
+    font-size: 11px;
+  }
+
+  .container {
+    width: 94%;
+  }
+
+  h1 {
+    font-size: 25px;
+
+    margin-top: 35px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+
+    margin-bottom: 22px;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  .student-card {
+    padding: 14px;
+  }
+
+  .student-info p {
+    font-size: 12px;
+  }
+
+  .buttons button {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 0 10px;
+  }
+}
